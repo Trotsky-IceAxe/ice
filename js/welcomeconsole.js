@@ -1,0 +1,1 @@
+document.querySelector('.home .category-list').onmousewheel=function(e){if(e.deltaY>=0){this.scrollLeft+=20;}else{this.scrollLeft-=20;}return false;}
