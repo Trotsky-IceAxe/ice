@@ -1,0 +1,8 @@
+/**
+ * Skipped minification because the original files appears to be already minified.
+ * Original file: /npm/prefetch-page@1.0.0-beta.6/dist/prefetch.js
+ *
+ * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
+ */
+var prefetch=function(){"use strict";var e=location,t=e.hostname,n=e.href,r=[];function o(e){var t=navigator,n=t.connection||t.mozConnection||t.webkitConnection||{},o=n.saveData,i=n.effectiveType;o||/2g/.test(i)||r.includes(e)||(r.push(e),function(e){var t=document.createElement("link");t.rel="prefetch",t.href=e,document.head.appendChild(t)}(e))}return function(e){if((i=document.createElement("link")).relList&&i.relList.supports&&i.relList.supports("prefetch")&&IntersectionObserver){var i;e||(e={});var c=function(e){try{if("string"==typeof e){var t=document.querySelector(e);if(1===t.nodeType)return t}if(1===e.nodeType)return e}catch(e){}return document}(e.el),u=e.origins||[t],f=e.limit||1/0,a=(e.threshold||0)/100,s=e.delay||0,h=e.customs||[],l=new IntersectionObserver((function(e){e.forEach((function(e){var t=e.isIntersecting,n=e.target;t?n.prefetch=function(e,t){return t?setTimeout(e,t):e()}((function(){l.unobserve(n),r.length<f&&o(n.href)}),s):clearTimeout(n.prefetch)}))}),{threshold:a});c.querySelectorAll("a:not([target=_blank])").forEach((function(e){if("*"===u||u.includes(e.hostname)){if(e.href===n)return;var t=new URL(e.href,n);t.origin+t.pathname===e.href&&l.observe(e)}}));for(var p=0;p<h.length;p++)o(h[p]);return function(){r=[],l.disconnect()}}}}();
+//# sourceMappingURL=prefetch.js.map
